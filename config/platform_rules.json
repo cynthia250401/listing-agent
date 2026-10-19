@@ -1,0 +1,39 @@
+{
+  "amazon_us": {
+    "display_name": "Amazon US",
+    "title": {"max_chars": 75, "effective_date": "2026-07-27", "notes": "Title limit of 75 characters for most categories, effective July 27, 2026."},
+    "item_highlights": {"enabled": true, "max_chars": 125, "notes": "Short highlight line shown near the title. Must not repeat the title."},
+    "bullets": {"count": 5, "max_chars": 200, "notes": "Recommended max 200 characters per bullet."},
+    "description": {"max_chars": 2000, "min_chars": 0},
+    "search_terms": {"max_bytes": 249, "notes": "Backend search terms, measured in UTF-8 bytes. Separate with spaces, no commas needed."},
+    "forbid_emoji_and_symbols": false,
+    "style_rules": [
+      "Start the title with the brand (if provided) and the product type, then the most important feature.",
+      "Capitalize the first letter of each major word in the title; do not use ALL CAPS.",
+      "Do not put promotional words (sale, free shipping, best seller) anywhere in the listing.",
+      "Each bullet starts with a short benefit phrase in caps-free Title Case followed by a colon, then the detail.",
+      "Do not repeat words from the title in the backend search terms; no competitor brand names, no ASINs.",
+      "Do not use emojis, HTML, or special symbols such as ®, ™, ©, ! or $ in the title.",
+      "Write the description as short, readable paragraphs focused on use cases."
+    ],
+    "note": "Verify in Seller Central before launch. Limits change and some categories have their own rules."
+  },
+  "tiktok_us": {
+    "display_name": "TikTok Shop US",
+    "title": {"min_chars": 25, "max_chars": 200, "ideal_min_chars": 50, "ideal_max_chars": 80, "notes": "25-200 characters; 50-80 performs best."},
+    "item_highlights": {"enabled": false, "max_chars": 0, "notes": "Not used on TikTok Shop. Leave empty."},
+    "bullets": {"count": 5, "max_chars": 200, "notes": "TikTok has no bullet field; these 5 selling points are placed at the top of the description."},
+    "description": {"max_chars": 10000, "min_chars": 500, "notes": "500+ characters recommended."},
+    "search_terms": {"max_bytes": 249, "notes": "Keywords for hashtags and search optimization; keep it short."},
+    "forbid_emoji_and_symbols": true,
+    "style_rules": [
+      "Write in a friendly, conversational tone that matches short-video shoppers.",
+      "Lead the title with the product type and the main use case; keep it within 50-80 characters when possible.",
+      "No emojis, and no special symbols such as ®, ™, ©, or decorative characters anywhere.",
+      "No promotional or urgency words (limited time, sale, free shipping, buy now).",
+      "Describe real use scenes (commute, gym, office) only if the seller's facts support them.",
+      "Keep sentences short and easy to scan on a phone."
+    ],
+    "note": "Verify in Seller Central before launch. Limits change and some categories have their own rules."
+  }
+}

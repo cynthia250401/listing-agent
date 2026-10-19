@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Listing Studio</title>
+  <meta name="description" content="Turn your product info into a compliant Amazon US or TikTok Shop US listing.">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">LS</span>
+        <span class="brand-name">Listing Studio</span>
+      </div>
+      <p class="tagline">Product info in Chinese or English → a compliant US listing</p>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <section class="panel form-panel" aria-labelledby="form-heading">
+      <div class="panel-head">
+        <h1 id="form-heading">Your product</h1>
+        <button type="button" class="link-btn" id="example-btn">Fill in an example</button>
+      </div>
+
+      <form id="listing-form" novalidate>
+        <fieldset class="platform-picker">
+          <legend>Platform</legend>
+          <label class="seg"><input type="radio" name="platform" value="amazon_us" checked><span>Amazon US</span></label>
+          <label class="seg"><input type="radio" name="platform" value="tiktok_us"><span>TikTok Shop US</span></label>
+        </fieldset>
+
+        <div class="field">
+          <label for="product_name">Product name <span class="req">required</span></label>
+          <input id="product_name" name="product_name" maxlength="200" required placeholder="e.g. 304不锈钢保温杯 / Stainless steel tumbler">
+        </div>
+
+        <div class="field">
+          <label for="description">Product details</label>
+          <textarea id="description" name="description" rows="5" maxlength="5000" placeholder="Everything you know about the product: size, capacity, materials, how it works, what's in the box…"></textarea>
+          <p class="hint">We only use facts you write here. Nothing is made up.</p>
+        </div>
+
+        <div class="field">
+          <label for="features">Key features <span class="opt">one per line</span></label>
+          <textarea id="features" name="features" rows="4" maxlength="3000"></textarea>
+        </div>
+
+        <details class="more" open>
+          <summary>More details (optional)</summary>
+          <div class="grid-2">
+            <div class="field"><label for="brand">Brand</label><input id="brand" name="brand" maxlength="100"></div>
+            <div class="field"><label for="category">Category</label><input id="category" name="category" maxlength="200"></div>
+            <div class="field"><label for="materials">Materials</label><input id="materials" name="materials" maxlength="500"></div>
+            <div class="field"><label for="dimensions">Size / weight</label><input id="dimensions" name="dimensions" maxlength="500"></div>
+            <div class="field"><label for="target_audience">Who it's for</label><input id="target_audience" name="target_audience" maxlength="500"></div>
+            <div class="field"><label for="keywords">Keywords <span class="opt">comma separated</span></label><input id="keywords" name="keywords" maxlength="1000"></div>
+          </div>
+          <div class="field">
+            <label for="certifications">Certifications / test reports <span class="opt">one per line</span></label>
+            <textarea id="certifications" name="certifications" rows="2" maxlength="1000"></textarea>
+          </div>
+          <div class="field">
+            <label for="extra_notes">Other notes</label>
+            <textarea id="extra_notes" name="extra_notes" rows="2" maxlength="2000"></textarea>
+          </div>
+        </details>
+
+        <div class="form-actions">
+          <button type="submit" class="primary-btn" id="submit-btn">Generate listing</button>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel result-panel" aria-labelledby="result-heading" aria-live="polite">
+      <div class="panel-head">
+        <h2 id="result-heading">Your listing</h2>
+        <button type="button" class="link-btn" id="copy-all-btn" hidden>Copy all</button>
+      </div>
+
+      <div id="empty-state" class="empty-state">
+        <p class="empty-title">Your listing will appear here</p>
+        <p>Fill in your product on the left and press <strong>Generate listing</strong>. It usually takes 30–90 seconds. We write the copy, check it against platform rules and your facts, and fix problems automatically.</p>
+      </div>
+
+      <ol id="progress" class="progress" hidden></ol>
+      <div id="result" hidden></div>
+    </section>
+  </main>
+
+  <footer class="wrap site-footer">
+    <p>Platform rules change often. Always verify in Seller Central before launch.</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
